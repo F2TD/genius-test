@@ -3,6 +3,9 @@
 }
 
 .parent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
   padding: 20px;
   border: 1px dotted black;
   /* display: flex; */
@@ -10,6 +13,13 @@
   /* justify-content: center; */
   /* align-items: center;
   flex-wrap: wrap ; */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .item.red {
@@ -20,30 +30,68 @@
   width: 150px;
   height: 150px;
   background-color: red;
-  color: white;
-  overflow: auto;
+  transform: translate(10px, 50px);
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+  /* transition-timing-function: linear; */
+  /* color: white;
+  overflow: auto; */
   /* padding: 10px;
   border: 6px solid darkred;
   margin: 10px; */
+}
+
+.item.red:hover {
+  background-color: aqua;
 }
 
 .item.green {
   width: 100px;
   height: 100px;
   background-color: green;
+  /* transform: rotate(45deg); */
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    background-color: green;
+  }
+  50% {
+    transform: rotate(10deg);
+    background-color: red;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: green;
+  }
 }
 
 .item.blue {
   width: 50px;
   height: 50px;
   background-color: blue;
+  transform: scale(1.5);
 }
 
-.section-title {
+.item.orange {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  transform: skew(20deg);
+}
+
+/* .section-title {
   background-color: blueviolet;
   position: sticky;
   top: 0;
-}
+} */
 /* .item:nth-child(2) {
   flex-shrink: 0; */
 /* flex-grow: 1; */
