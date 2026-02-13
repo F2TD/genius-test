@@ -1,0 +1,30 @@
+.hero-section {
+  padding: 272px 0;
+  background-image:
+    linear-gradient(
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url("../images/hero-section-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  /* background: url("../images/couple_in_bakery.jpg") no-repeat center/top cover; 
+  коротка форма запису не рекомендується*/
+
+  &__title {
+    margin-bottom: 0;
+    color: var(--color-primary-light);
+    /* text-decoration: underline; */
+    text-align: center;
+    /* text-transform: uppercase; */
+    /* text-shadow: 2px 2px 4px violet; */
+    /* letter-spacing: 4px; */
+    font-size: 128px;
+    font-weight: 900;
+    /* font-style: italic; */
+  }
+}
